@@ -14,19 +14,14 @@
       //   return null;
       // }
 
-      
-
-      window.onload = function() {
+      $().ready(function() {
         var name = GetQueryString('name');
-        alert("ddddd");
         alert(name);
-      }
-
+      })
 
       function GetQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
-        alert(JSON.parse(r));
         if(r != null) 
           return decodeURI(r[2]);
         return null;
