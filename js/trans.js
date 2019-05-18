@@ -11,6 +11,6 @@ GetParamStr = function(name) {
 GetTransStr = function() {
     var transStr = window.location.search.substr(1);
     if (transStr == null || transStr == "")
-        return "tomcat";
+        return "testProject";
     return transStr;
 }
