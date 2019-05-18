@@ -8,8 +8,6 @@
         var transName = GetTransStr();
         if (transName == "testProject") {
           $("#mainContent").attr('src', 'http://47.94.234.98/testProject/');
-        } else if (transName == "wx") {
-          $("#mainContent").attr('src', 'http://47.94.234.98:8080/');
         } else {
           $("#mainContent").attr('src', 'http://' + transName + '.com/');
         }
