@@ -9,5 +9,8 @@ GetParamStr = function(name) {
 
 // 获取所有参数值
 GetTransStr = function() {
-    return window.location.search.substr(1);
+    var transStr = window.location.search.substr(1);
+    if (transStr == null || transStr == "")
+        return "tomcat";
+    return transStr;
 }

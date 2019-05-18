@@ -8,13 +8,16 @@
         var transName = GetTransStr();
         if (transName == "testProject") {
           window.location.assign("http://47.94.234.98/testProject/");
-        } else if (transName == "baidu") {
-          window.location.assign("http://www.baidu.com/");
+        } else if (transName == "tomcat") {
+          $("#mainContent").attr('src', 'http://47.94.234.98:8080/');
+        } else {
+          $("#mainContent").attr('src', 'http://www.' + transName + '.com/');
+
         }
       })
     </script>
   </head>
   <body>
-     Hello World!!!
+     <iframe id="mainContent" width="100%" height="100%" style="border:0px;"></iframe>
   </body>
 </html>
