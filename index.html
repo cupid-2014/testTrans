@@ -2,30 +2,16 @@
   <head>
     <title>this is trans test</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/trans.js"></script>
     <script type="text/javascript">
-      // window.location = "http://47.94.234.98/testProject/";
-      // window.location.assign("http://47.94.234.98/testProject/");
-
-      // getUrlParam = function(name) {
-      //   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-      //   var r = window.location.search.substr(1).match(reg);
-      //   if (r != null) 
-      //     return unescape(r[2]); 
-      //   return null;
-      // }
-
       $().ready(function() {
-        var name = GetQueryString('name');
-        alert(name);
+        var transName = GetTransStr();
+        if (transName == "testProject") {
+          window.location.assign("http://47.94.234.98/testProject/");
+        } else if (transName == "baidu") {
+          window.location.assign("http://www.baidu.com/");
+        }
       })
-
-      function GetQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if(r != null) 
-          return decodeURI(r[2]);
-        return null;
-	  	}
     </script>
   </head>
   <body>
