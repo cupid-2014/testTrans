@@ -11,10 +11,8 @@
         } else if (transName == "erp") {
           // $("#mainContent").attr('src', 'http://47.94.234.98:8080/');
           window.open("http://47.94.234.98:8080", "_self");
-        } else if (transName != null && transName != "") {
-          $("#mainContent").attr('src', 'http://' + transName + '.com/');
         } else {
-          $("#mainContent").innerHtml("memory");
+          $("#mainContent").attr('src', 'http://' + transName + '.com/');
         }
       })
     </script>
