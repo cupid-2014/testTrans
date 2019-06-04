@@ -7,7 +7,9 @@
       $().ready(function() {
         var transName = GetTransStr();
         if (transName == "testProject") {
-          $("#mainContent").attr('src', 'http://47.94.234.98/testProject/');
+          $("#mainContent").attr('src', 'http://47.94.234.98:7070/');
+        } else if (transName == "erp") {
+          $("#mainContent").attr('src', 'http://47.94.234.98:8080/');
         } else {
           $("#mainContent").attr('src', 'http://' + transName + '.com/');
         }
